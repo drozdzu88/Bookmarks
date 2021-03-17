@@ -1,0 +1,13 @@
+*.pyc
+*~
+__pycache__
+env
+db.sqlite3
+/static
+/media
+/ssl
+.DS_Store
+ssl.key
+ssl.crt
+cert.key
+cert.crt
