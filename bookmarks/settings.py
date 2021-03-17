@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
+import django_heroku
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -152,3 +153,6 @@ SOCIAL_AUTH_TWITTER_SECRET = 'PFjofyU7AB9vH3VX5uxl71xgkRZeEidXpAR4MekEOfiduIRUHR
 
 SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '981573305065-cjmorh30bo9fos8l3n3rr04sb2nll87q.apps.googleusercontent.com' # Google Consumer Key
 SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = 'V9KbvxCDht5A3TLBuYmYx57k' # Google Consumer Secret
+
+# Activate Django-Heroku.
+django_heroku.settings(locals())
