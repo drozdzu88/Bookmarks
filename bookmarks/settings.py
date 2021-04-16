@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 
 import os
 import django_heroku
+from django.urls import reverse_lazy 
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -42,6 +43,7 @@ INSTALLED_APPS = [
     'social_django',
     'django_extensions',
     'sslserver',
+    'easy_thumbnails',
     'images.apps.ImagesConfig',
 ]
 
@@ -156,3 +158,6 @@ SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = 'V9KbvxCDht5A3TLBuYmYx57k' # Google Consumer 
 
 # Activate Django-Heroku.
 django_heroku.settings(locals())
+
+ABSOLUTE_URL_OVERRIDES = {'auth.user': lambda u: reverse_lazy('user_detail', args=[u.username])
+}

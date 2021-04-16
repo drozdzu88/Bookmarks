@@ -71,7 +71,7 @@
           window.setTimeout(arguments.callee, 250)
         } else {
           // Too much attempts to load, send error
-          alert('Wystąpił błąd podczas wczytywania jQuery')
+          alert('An error occurred while loading jQuery')
         }
       } else {
           bookmarklet();
